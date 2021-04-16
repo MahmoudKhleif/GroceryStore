@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab3707c10ee2421aa2476b9eb8ed82cd" Name="Diagram1">
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_INFO" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_Procurement" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_Suppliers" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_User" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_INFO_TB_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_Procurement_TB_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_Procurement_TB_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_Customer2" Width="1.5" PointX="7.625" PointY="12.75" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_Productt" Width="1.5" PointX="7.625" PointY="9.75" />
+        <EntityTypeShape EntityType="GorceryStoreModel.TB_Saless" Width="1.5" PointX="9.875" PointY="0.5" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_Saless_TB_Customer2" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_Saless_TB_Productt" />
+        <AssociationConnector Association="GorceryStoreModel.FK_TB_Saless_TB_User" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

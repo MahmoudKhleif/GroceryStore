@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GorceryStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_INFO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TB_User" Relationship="Self.FK_TB_INFO_TB_User" FromRole="TB_INFO" ToRole="TB_User" />
+  </EntityType>
+  <EntityType Name="TB_Procurement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="BuyerID" Type="Int32" Nullable="false" />
+    <Property Name="TheTotalAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Suppliers" Relationship="Self.FK_TB_Procurement_TB_Suppliers" FromRole="TB_Procurement" ToRole="TB_Suppliers" />
+    <NavigationProperty Name="TB_User" Relationship="Self.FK_TB_Procurement_TB_User" FromRole="TB_Procurement" ToRole="TB_User" />
+  </EntityType>
+  <EntityType Name="TB_Suppliers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TB_Procurement" Relationship="Self.FK_TB_Procurement_TB_Suppliers" FromRole="TB_Suppliers" ToRole="TB_Procurement" />
+  </EntityType>
+  <EntityType Name="TB_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_INFO" Relationship="Self.FK_TB_INFO_TB_User" FromRole="TB_User" ToRole="TB_INFO" />
+    <NavigationProperty Name="TB_Procurement" Relationship="Self.FK_TB_Procurement_TB_User" FromRole="TB_User" ToRole="TB_Procurement" />
+    <NavigationProperty Name="TB_Saless" Relationship="GorceryStoreModel.FK_TB_Saless_TB_User" FromRole="TB_User" ToRole="TB_Saless" />
+  </EntityType>
+  <Association Name="FK_TB_INFO_TB_User">
+    <End Role="TB_User" Type="Self.TB_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TB_INFO" Type="Self.TB_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_INFO">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Procurement_TB_Suppliers">
+    <End Role="TB_Suppliers" Type="Self.TB_Suppliers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TB_Procurement" Type="Self.TB_Procurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Suppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Procurement">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Procurement_TB_User">
+    <End Role="TB_User" Type="Self.TB_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TB_Procurement" Type="Self.TB_Procurement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Procurement">
+        <PropertyRef Name="BuyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GorceryStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_INFO" EntityType="Self.TB_INFO" />
+    <EntitySet Name="TB_Procurement" EntityType="Self.TB_Procurement" />
+    <EntitySet Name="TB_Suppliers" EntityType="Self.TB_Suppliers" />
+    <EntitySet Name="TB_User" EntityType="Self.TB_User" />
+    <AssociationSet Name="FK_TB_INFO_TB_User" Association="Self.FK_TB_INFO_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="TB_INFO" EntitySet="TB_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Procurement_TB_Suppliers" Association="Self.FK_TB_Procurement_TB_Suppliers">
+      <End Role="TB_Suppliers" EntitySet="TB_Suppliers" />
+      <End Role="TB_Procurement" EntitySet="TB_Procurement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Procurement_TB_User" Association="Self.FK_TB_Procurement_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="TB_Procurement" EntitySet="TB_Procurement" />
+    </AssociationSet>
+    <EntitySet Name="TB_Customer2" EntityType="GorceryStoreModel.TB_Customer2" />
+    <EntitySet Name="TB_Productt" EntityType="GorceryStoreModel.TB_Productt" />
+    <EntitySet Name="TB_Saless" EntityType="GorceryStoreModel.TB_Saless" />
+    <AssociationSet Name="FK_TB_Saless_TB_Customer2" Association="GorceryStoreModel.FK_TB_Saless_TB_Customer2">
+      <End Role="TB_Customer2" EntitySet="TB_Customer2" />
+      <End Role="TB_Saless" EntitySet="TB_Saless" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Saless_TB_Productt" Association="GorceryStoreModel.FK_TB_Saless_TB_Productt">
+      <End Role="TB_Productt" EntitySet="TB_Productt" />
+      <End Role="TB_Saless" EntitySet="TB_Saless" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Saless_TB_User" Association="GorceryStoreModel.FK_TB_Saless_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="TB_Saless" EntitySet="TB_Saless" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TB_Customer2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Saless" Relationship="GorceryStoreModel.FK_TB_Saless_TB_Customer2" FromRole="TB_Customer2" ToRole="TB_Saless" />
+  </EntityType>
+  <EntityType Name="TB_Productt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductionsDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExpirationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Saless" Relationship="GorceryStoreModel.FK_TB_Saless_TB_Productt" FromRole="TB_Productt" ToRole="TB_Saless" />
+  </EntityType>
+  <EntityType Name="TB_Saless">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="SellerID" Type="Int32" Nullable="false" />
+    <Property Name="BuyerID" Type="Int32" Nullable="false" />
+    <Property Name="TheTotalAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Customer2" Relationship="GorceryStoreModel.FK_TB_Saless_TB_Customer2" FromRole="TB_Saless" ToRole="TB_Customer2" />
+    <NavigationProperty Name="TB_Productt" Relationship="GorceryStoreModel.FK_TB_Saless_TB_Productt" FromRole="TB_Saless" ToRole="TB_Productt" />
+    <NavigationProperty Name="TB_User" Relationship="GorceryStoreModel.FK_TB_Saless_TB_User" FromRole="TB_Saless" ToRole="TB_User" />
+  </EntityType>
+  <Association Name="FK_TB_Saless_TB_Customer2">
+    <End Type="GorceryStoreModel.TB_Customer2" Role="TB_Customer2" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="GorceryStoreModel.TB_Saless" Role="TB_Saless" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Customer2">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Saless">
+        <PropertyRef Name="BuyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Saless_TB_Productt">
+    <End Type="GorceryStoreModel.TB_Productt" Role="TB_Productt" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="GorceryStoreModel.TB_Saless" Role="TB_Saless" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Productt">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Saless">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Saless_TB_User">
+    <End Type="GorceryStoreModel.TB_User" Role="TB_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="GorceryStoreModel.TB_Saless" Role="TB_Saless" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Saless">
+        <PropertyRef Name="SellerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
