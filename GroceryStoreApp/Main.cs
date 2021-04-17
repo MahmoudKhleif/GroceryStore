@@ -19,6 +19,7 @@ namespace GroceryStoreApp
         pl.Procuerment_FORM Procuerment_FORM = new pl.Procuerment_FORM();
         pl.Customers_FORM Customers_FORM = new pl.Customers_FORM();
         pl.Product_FORM product_FORM = new pl.Product_FORM();
+        pl.Sales_FORM Sales_FORM = new pl.Sales_FORM();
         public Main()
         {
             InitializeComponent();
@@ -88,6 +89,12 @@ namespace GroceryStoreApp
             panelcontiner.Controls.Clear();
             panelcontiner.Controls.Add(product_FORM.panel1);
 
+        }
+
+        private void Sales_Click(object sender, EventArgs e)
+        {
+            panelcontiner.Controls.Clear();
+            panelcontiner.Controls.Add(Sales_FORM.panel1);
         }
     }
 }

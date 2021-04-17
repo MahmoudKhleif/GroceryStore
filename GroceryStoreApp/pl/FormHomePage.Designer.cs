@@ -91,12 +91,13 @@ namespace GroceryStoreApp.pl
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.simpleButton5);
             this.panel2.Controls.Add(this.simpleButton4);
             this.panel2.Controls.Add(this.simpleButton3);
             this.panel2.Controls.Add(this.simpleButton2);
             this.panel2.Controls.Add(this.simpleButton1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 476);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(967, 83);
@@ -105,50 +106,60 @@ namespace GroceryStoreApp.pl
             // simpleButton5
             // 
             this.simpleButton5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(578, 18);
+            this.simpleButton5.Location = new System.Drawing.Point(618, 18);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(118, 44);
+            this.simpleButton5.Size = new System.Drawing.Size(128, 44);
             this.simpleButton5.TabIndex = 0;
             this.simpleButton5.Text = "Sales";
             // 
             // simpleButton4
             // 
             this.simpleButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(729, 18);
+            this.simpleButton4.Location = new System.Drawing.Point(753, 18);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(129, 44);
+            this.simpleButton4.Size = new System.Drawing.Size(202, 44);
             this.simpleButton4.TabIndex = 0;
             this.simpleButton4.Text = "Add Customer";
             // 
             // simpleButton3
             // 
             this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(427, 18);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(118, 44);
+            this.simpleButton3.Size = new System.Drawing.Size(184, 44);
             this.simpleButton3.TabIndex = 0;
             this.simpleButton3.Text = "procurement";
             // 
             // simpleButton2
             // 
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(276, 18);
+            this.simpleButton2.Location = new System.Drawing.Point(228, 18);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(118, 44);
+            this.simpleButton2.Size = new System.Drawing.Size(192, 44);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Add Supplier";
             // 
             // simpleButton1
             // 
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(113, 18);
+            this.simpleButton1.Location = new System.Drawing.Point(37, 18);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(130, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(184, 44);
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "Add Product";
             // 

@@ -37,7 +37,7 @@ namespace GroceryStoreApp
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.Sales = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.User_Btn = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@ namespace GroceryStoreApp
             this.flowLayoutPanel1.Controls.Add(this.simpleButton2);
             this.flowLayoutPanel1.Controls.Add(this.simpleButton3);
             this.flowLayoutPanel1.Controls.Add(this.simpleButton4);
-            this.flowLayoutPanel1.Controls.Add(this.simpleButton5);
+            this.flowLayoutPanel1.Controls.Add(this.Sales);
             this.flowLayoutPanel1.Controls.Add(this.simpleButton6);
             this.flowLayoutPanel1.Controls.Add(this.User_Btn);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -149,20 +149,21 @@ namespace GroceryStoreApp
             this.simpleButton4.Text = "Customers";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // simpleButton5
+            // Sales
             // 
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton5.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.Appearance.Options.UseForeColor = true;
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton5.Location = new System.Drawing.Point(3, 183);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton5.Size = new System.Drawing.Size(189, 39);
-            this.simpleButton5.TabIndex = 5;
-            this.simpleButton5.Text = "Sales";
+            this.Sales.Appearance.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sales.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Sales.Appearance.Options.UseFont = true;
+            this.Sales.Appearance.Options.UseForeColor = true;
+            this.Sales.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Sales.ImageOptions.Image")));
+            this.Sales.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Sales.Location = new System.Drawing.Point(3, 183);
+            this.Sales.Name = "Sales";
+            this.Sales.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.Sales.Size = new System.Drawing.Size(189, 39);
+            this.Sales.TabIndex = 5;
+            this.Sales.Text = "Sales";
+            this.Sales.Click += new System.EventHandler(this.Sales_Click);
             // 
             // simpleButton6
             // 
@@ -282,7 +283,7 @@ namespace GroceryStoreApp
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(423, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 27);
@@ -366,7 +367,7 @@ namespace GroceryStoreApp
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton Sales;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private DevExpress.XtraEditors.SimpleButton User_Btn;

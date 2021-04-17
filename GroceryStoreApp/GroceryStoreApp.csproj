@@ -142,6 +142,18 @@
     <Compile Include="pl\Product_FORM.Designer.cs">
       <DependentUpon>Product_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="pl\Sales_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pl\Sales_Add.Designer.cs">
+      <DependentUpon>Sales_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pl\Sales_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pl\Sales_FORM.Designer.cs">
+      <DependentUpon>Sales_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="pl\Supplier_Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,12 @@
     <EmbeddedResource Include="pl\Product_FORM.resx">
       <DependentUpon>Product_FORM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pl\Sales_Add.resx">
+      <DependentUpon>Sales_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pl\Sales_FORM.resx">
+      <DependentUpon>Sales_FORM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pl\Supplier_Add.resx">
       <DependentUpon>Supplier_Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,9 +297,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\images.png" />
   </ItemGroup>

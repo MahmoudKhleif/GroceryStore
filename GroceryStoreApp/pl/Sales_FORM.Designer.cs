@@ -1,7 +1,7 @@
 ﻿
 namespace GroceryStoreApp.pl
 {
-    partial class Customers_FORM
+    partial class Sales_FORM
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,16 @@ namespace GroceryStoreApp.pl
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers_FORM));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales_FORM));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSellerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBuyerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTheTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.text_search = new System.Windows.Forms.TextBox();
@@ -47,18 +46,10 @@ namespace GroceryStoreApp.pl
             this.Delete = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Add = new DevExpress.XtraEditors.SimpleButton();
-            this.gorceryStoreDataSet11 = new GroceryStoreApp.GorceryStoreDataSet1();
-            this.gorceryStoreDataSet1 = new GroceryStoreApp.GorceryStoreDataSet1();
-            this.tBCustomerrBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tB_CustomerrTableAdapter = new GroceryStoreApp.GorceryStoreDataSet1TableAdapters.TB_CustomerrTableAdapter();
-            this.tB_CustomerrTableAdapter1 = new GroceryStoreApp.GorceryStoreDataSet1TableAdapters.TB_CustomerrTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gorceryStoreDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gorceryStoreDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCustomerrBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +64,7 @@ namespace GroceryStoreApp.pl
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(GroceryStoreApp.TB_Customer2);
+            this.gridControl1.DataSource = typeof(GroceryStoreApp.TB_Saless);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -81,7 +72,7 @@ namespace GroceryStoreApp.pl
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(949, 412);
-            this.gridControl1.TabIndex = 1;
+            this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -89,11 +80,11 @@ namespace GroceryStoreApp.pl
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
-            this.colFirstName,
-            this.colLastName,
-            this.colEmail,
-            this.colAddress,
-            this.colPhone});
+            this.colSellerID,
+            this.colBuyerID,
+            this.colProductID,
+            this.colTheTotalAmount,
+            this.colDATE});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -107,53 +98,54 @@ namespace GroceryStoreApp.pl
             this.colID.VisibleIndex = 0;
             this.colID.Width = 94;
             // 
-            // colFirstName
+            // colSellerID
             // 
-            this.colFirstName.FieldName = "FirstName";
-            this.colFirstName.MinWidth = 25;
-            this.colFirstName.Name = "colFirstName";
-            this.colFirstName.Visible = true;
-            this.colFirstName.VisibleIndex = 1;
-            this.colFirstName.Width = 94;
+            this.colSellerID.FieldName = "SellerID";
+            this.colSellerID.MinWidth = 25;
+            this.colSellerID.Name = "colSellerID";
+            this.colSellerID.Visible = true;
+            this.colSellerID.VisibleIndex = 1;
+            this.colSellerID.Width = 94;
             // 
-            // colLastName
+            // colBuyerID
             // 
-            this.colLastName.FieldName = "LastName";
-            this.colLastName.MinWidth = 25;
-            this.colLastName.Name = "colLastName";
-            this.colLastName.Visible = true;
-            this.colLastName.VisibleIndex = 2;
-            this.colLastName.Width = 94;
+            this.colBuyerID.FieldName = "BuyerID";
+            this.colBuyerID.MinWidth = 25;
+            this.colBuyerID.Name = "colBuyerID";
+            this.colBuyerID.Visible = true;
+            this.colBuyerID.VisibleIndex = 2;
+            this.colBuyerID.Width = 94;
             // 
-            // colEmail
+            // colProductID
             // 
-            this.colEmail.FieldName = "Email";
-            this.colEmail.MinWidth = 25;
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 3;
-            this.colEmail.Width = 94;
+            this.colProductID.FieldName = "ProductID";
+            this.colProductID.MinWidth = 25;
+            this.colProductID.Name = "colProductID";
+            this.colProductID.Visible = true;
+            this.colProductID.VisibleIndex = 3;
+            this.colProductID.Width = 94;
             // 
-            // colAddress
+            // colTheTotalAmount
             // 
-            this.colAddress.FieldName = "Address";
-            this.colAddress.MinWidth = 25;
-            this.colAddress.Name = "colAddress";
-            this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 4;
-            this.colAddress.Width = 94;
+            this.colTheTotalAmount.FieldName = "TheTotalAmount";
+            this.colTheTotalAmount.MinWidth = 25;
+            this.colTheTotalAmount.Name = "colTheTotalAmount";
+            this.colTheTotalAmount.Visible = true;
+            this.colTheTotalAmount.VisibleIndex = 4;
+            this.colTheTotalAmount.Width = 94;
             // 
-            // colPhone
+            // colDATE
             // 
-            this.colPhone.FieldName = "Phone";
-            this.colPhone.MinWidth = 25;
-            this.colPhone.Name = "colPhone";
-            this.colPhone.Visible = true;
-            this.colPhone.VisibleIndex = 5;
-            this.colPhone.Width = 94;
+            this.colDATE.FieldName = "DATE";
+            this.colDATE.MinWidth = 25;
+            this.colDATE.Name = "colDATE";
+            this.colDATE.Visible = true;
+            this.colDATE.VisibleIndex = 5;
+            this.colDATE.Width = 94;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.btn_search);
             this.panel2.Controls.Add(this.text_search);
             this.panel2.Controls.Add(this.Refresh);
@@ -164,7 +156,7 @@ namespace GroceryStoreApp.pl
             this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(949, 100);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 2;
             // 
             // btn_search
             // 
@@ -175,7 +167,6 @@ namespace GroceryStoreApp.pl
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(74, 76);
             this.btn_search.TabIndex = 18;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // text_search
             // 
@@ -237,47 +228,21 @@ namespace GroceryStoreApp.pl
             this.Add.Text = "Add";
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // gorceryStoreDataSet11
-            // 
-            this.gorceryStoreDataSet11.DataSetName = "GorceryStoreDataSet1";
-            this.gorceryStoreDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gorceryStoreDataSet1
-            // 
-            this.gorceryStoreDataSet1.DataSetName = "GorceryStoreDataSet1";
-            this.gorceryStoreDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBCustomerrBindingSource
-            // 
-            this.tBCustomerrBindingSource.DataMember = "TB_Customerr";
-            this.tBCustomerrBindingSource.DataSource = this.gorceryStoreDataSet1;
-            // 
-            // tB_CustomerrTableAdapter
-            // 
-            this.tB_CustomerrTableAdapter.ClearBeforeFill = true;
-            // 
-            // tB_CustomerrTableAdapter1
-            // 
-            this.tB_CustomerrTableAdapter1.ClearBeforeFill = true;
-            // 
-            // Customers_FORM
+            // Sales_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(949, 512);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Customers_FORM";
-            this.Text = "Customers_FORM";
-            this.Load += new System.EventHandler(this.Customers_FORM_Load);
+            this.Name = "Sales_FORM";
+            this.Text = "Sales_FORM";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gorceryStoreDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gorceryStoreDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCustomerrBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,25 +250,20 @@ namespace GroceryStoreApp.pl
         #endregion
 
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        public DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraEditors.SimpleButton Add;
-        private DevExpress.XtraEditors.SimpleButton Edit;
-        private DevExpress.XtraEditors.SimpleButton Delete;
-        private DevExpress.XtraEditors.SimpleButton Refresh;
+        private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SimpleButton btn_search;
         private System.Windows.Forms.TextBox text_search;
-        private GorceryStoreDataSet1 gorceryStoreDataSet1;
-        private System.Windows.Forms.BindingSource tBCustomerrBindingSource;
-        private GorceryStoreDataSet1TableAdapters.TB_CustomerrTableAdapter tB_CustomerrTableAdapter;
-        private GorceryStoreDataSet1 gorceryStoreDataSet11;
-        private GorceryStoreDataSet1TableAdapters.TB_CustomerrTableAdapter tB_CustomerrTableAdapter1;
+        private DevExpress.XtraEditors.SimpleButton Refresh;
+        private DevExpress.XtraEditors.SimpleButton Delete;
+        private DevExpress.XtraEditors.SimpleButton Edit;
+        private DevExpress.XtraEditors.SimpleButton Add;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraGrid.Columns.GridColumn colFirstName;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastName;
-        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
-        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colSellerID;
+        private DevExpress.XtraGrid.Columns.GridColumn colBuyerID;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductID;
+        private DevExpress.XtraGrid.Columns.GridColumn colTheTotalAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colDATE;
     }
 }
