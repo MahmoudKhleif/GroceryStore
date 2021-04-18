@@ -12,7 +12,7 @@ namespace GroceryStoreApp
 {
     public partial class Main : Form
     {
-
+        
         pl.FormHomePage HOMEp = new pl.FormHomePage();
         pl.Supplier_FORM Supplier_FORM = new pl.Supplier_FORM();
         pl.Users_Form Users_Form = new pl.Users_Form();
@@ -20,11 +20,17 @@ namespace GroceryStoreApp
         pl.Customers_FORM Customers_FORM = new pl.Customers_FORM();
         pl.Product_FORM product_FORM = new pl.Product_FORM();
         pl.Sales_FORM Sales_FORM = new pl.Sales_FORM();
+      
+      
+         
         public Main()
         {
             InitializeComponent();
+            // to show admin name
+            UserNAme.Text = GroceryStoreApp.pl.user1.Name; 
+
         }
-       
+        
         // minimise app
         private void Minimize_Click_1(object sender, EventArgs e)
         {
@@ -95,6 +101,11 @@ namespace GroceryStoreApp
         {
             panelcontiner.Controls.Clear();
             panelcontiner.Controls.Add(Sales_FORM.panel1);
+        }
+
+        private void UserNAme_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Threading;
 
 namespace GroceryStoreApp.pl
 {
@@ -29,15 +30,19 @@ namespace GroceryStoreApp.pl
         //log in 
         private void Add_Click(object sender, EventArgs e)
         {
-       TB_INFO1 = DB.TB_INFO.Where(X => X.UserName == textUserName.Text && X.Password == textPassWord.Text).FirstOrDefault();
+            TB_INFO1 = DB.TB_INFO.Where(X => X.UserName == textUserName.Text && X.Password == textPassWord.Text).FirstOrDefault();
             if (TB_INFO1 != null)
             {
                 DB.Entry(TB_INFO1).State = EntityState.Modified;
-                Main.UserNAme.Text = TB_INFO1.UserName;
-                Main.Enabled=true;
+
+
                 DB.SaveChanges();
-                
-                Main.Show();
+                this.Close();
+                Thread th = new Thread(openMain);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+                user1.Name = TB_INFO1.UserName;
+
             }
             else
             {
@@ -50,9 +55,15 @@ namespace GroceryStoreApp.pl
             this.Close();
         }
 
-        private void LOGIN_Activated(object sender, EventArgs e)
+        void openMain()
         {
-            Main.Enabled = false;
+            Application.Run(new Main());
         }
     }
-}
+        static public class user1
+        {
+            static public string Name { get; set; }
+        }
+    } 
+
+

@@ -41,7 +41,7 @@ namespace GroceryStoreApp.pl
                     TB_INFO1.Password = textPassWord.Text;
                     DB.TB_INFO.Add(TB_INFO1);
                     DB.SaveChanges();
-                    MessageBox.Show("A new sale has been added");
+                    MessageBox.Show("A new user has been added");
                     this.Close();
               
 

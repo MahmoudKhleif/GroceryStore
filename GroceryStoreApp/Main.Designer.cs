@@ -33,16 +33,6 @@ namespace GroceryStoreApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.UserNAme = new System.Windows.Forms.Label();
-            this.panelcontiner = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.panelTOP = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Minimize = new DevExpress.XtraEditors.SimpleButton();
-            this.Maximaizebutton = new DevExpress.XtraEditors.SimpleButton();
-            this.closebutton = new DevExpress.XtraEditors.SimpleButton();
             this.Main1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -50,12 +40,22 @@ namespace GroceryStoreApp
             this.Sales = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.User_Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.UserNAme = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelcontiner = new System.Windows.Forms.Panel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelTOP = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Minimize = new DevExpress.XtraEditors.SimpleButton();
+            this.Maximaizebutton = new DevExpress.XtraEditors.SimpleButton();
+            this.closebutton = new DevExpress.XtraEditors.SimpleButton();
             this.panelLeft.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelTOP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTOP.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -83,117 +83,6 @@ namespace GroceryStoreApp
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(192, 374);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.UserNAme);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 185);
-            this.panel1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(29, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 27);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Admin";
-            // 
-            // UserNAme
-            // 
-            this.UserNAme.AutoSize = true;
-            this.UserNAme.ForeColor = System.Drawing.Color.Transparent;
-            this.UserNAme.Location = new System.Drawing.Point(20, 128);
-            this.UserNAme.Name = "UserNAme";
-            this.UserNAme.Size = new System.Drawing.Size(110, 27);
-            this.UserNAme.TabIndex = 1;
-            this.UserNAme.Text = "Mahmoud";
-            // 
-            // panelcontiner
-            // 
-            this.panelcontiner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelcontiner.Location = new System.Drawing.Point(192, 51);
-            this.panelcontiner.Name = "panelcontiner";
-            this.panelcontiner.Size = new System.Drawing.Size(967, 508);
-            this.panelcontiner.TabIndex = 2;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panelTOP;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // panelTOP
-            // 
-            this.panelTOP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelTOP.Controls.Add(this.label1);
-            this.panelTOP.Controls.Add(this.Minimize);
-            this.panelTOP.Controls.Add(this.Maximaizebutton);
-            this.panelTOP.Controls.Add(this.closebutton);
-            this.panelTOP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTOP.Location = new System.Drawing.Point(192, 0);
-            this.panelTOP.Name = "panelTOP";
-            this.panelTOP.Size = new System.Drawing.Size(967, 46);
-            this.panelTOP.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(423, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 27);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Main";
-            // 
-            // Minimize
-            // 
-            this.Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimize.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.ImageOptions.Image")));
-            this.Minimize.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.Minimize.Location = new System.Drawing.Point(826, -4);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.Minimize.Size = new System.Drawing.Size(46, 49);
-            this.Minimize.TabIndex = 6;
-            this.Minimize.Click += new System.EventHandler(this.Minimize_Click_1);
-            // 
-            // Maximaizebutton
-            // 
-            this.Maximaizebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximaizebutton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Maximaizebutton.ImageOptions.Image")));
-            this.Maximaizebutton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.Maximaizebutton.Location = new System.Drawing.Point(875, -4);
-            this.Maximaizebutton.Name = "Maximaizebutton";
-            this.Maximaizebutton.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.Maximaizebutton.Size = new System.Drawing.Size(46, 49);
-            this.Maximaizebutton.TabIndex = 6;
-            this.Maximaizebutton.Click += new System.EventHandler(this.Maximaizebutton_Click_1);
-            // 
-            // closebutton
-            // 
-            this.closebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closebutton.Appearance.Font = new System.Drawing.Font("Times New Roman", 7.8F);
-            this.closebutton.Appearance.Options.UseFont = true;
-            this.closebutton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("closebutton.ImageOptions.Image")));
-            this.closebutton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.closebutton.Location = new System.Drawing.Point(924, -4);
-            this.closebutton.Name = "closebutton";
-            this.closebutton.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.closebutton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.closebutton.Size = new System.Drawing.Size(46, 49);
-            this.closebutton.TabIndex = 4;
-            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // Main1
             // 
@@ -307,6 +196,38 @@ namespace GroceryStoreApp
             this.User_Btn.Text = "Users";
             this.User_Btn.Click += new System.EventHandler(this.User_Btn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.UserNAme);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(192, 185);
+            this.panel1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(29, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 27);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Admin";
+            // 
+            // UserNAme
+            // 
+            this.UserNAme.AutoSize = true;
+            this.UserNAme.ForeColor = System.Drawing.Color.Transparent;
+            this.UserNAme.Location = new System.Drawing.Point(20, 128);
+            this.UserNAme.Name = "UserNAme";
+            this.UserNAme.Size = new System.Drawing.Size(110, 27);
+            this.UserNAme.TabIndex = 1;
+            this.UserNAme.Text = "Mahmoud";
+            this.UserNAme.Click += new System.EventHandler(this.UserNAme_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GroceryStoreApp.Properties.Resources.images;
@@ -316,6 +237,86 @@ namespace GroceryStoreApp
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelcontiner
+            // 
+            this.panelcontiner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelcontiner.Location = new System.Drawing.Point(192, 51);
+            this.panelcontiner.Name = "panelcontiner";
+            this.panelcontiner.Size = new System.Drawing.Size(967, 508);
+            this.panelcontiner.TabIndex = 2;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panelTOP;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // panelTOP
+            // 
+            this.panelTOP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelTOP.Controls.Add(this.label1);
+            this.panelTOP.Controls.Add(this.Minimize);
+            this.panelTOP.Controls.Add(this.Maximaizebutton);
+            this.panelTOP.Controls.Add(this.closebutton);
+            this.panelTOP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTOP.Location = new System.Drawing.Point(192, 0);
+            this.panelTOP.Name = "panelTOP";
+            this.panelTOP.Size = new System.Drawing.Size(967, 46);
+            this.panelTOP.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(423, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 27);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Main";
+            // 
+            // Minimize
+            // 
+            this.Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimize.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.ImageOptions.Image")));
+            this.Minimize.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.Minimize.Location = new System.Drawing.Point(826, -4);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.Minimize.Size = new System.Drawing.Size(46, 49);
+            this.Minimize.TabIndex = 6;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click_1);
+            // 
+            // Maximaizebutton
+            // 
+            this.Maximaizebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximaizebutton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Maximaizebutton.ImageOptions.Image")));
+            this.Maximaizebutton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.Maximaizebutton.Location = new System.Drawing.Point(875, -4);
+            this.Maximaizebutton.Name = "Maximaizebutton";
+            this.Maximaizebutton.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.Maximaizebutton.Size = new System.Drawing.Size(46, 49);
+            this.Maximaizebutton.TabIndex = 6;
+            this.Maximaizebutton.Click += new System.EventHandler(this.Maximaizebutton_Click_1);
+            // 
+            // closebutton
+            // 
+            this.closebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closebutton.Appearance.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.closebutton.Appearance.Options.UseFont = true;
+            this.closebutton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("closebutton.ImageOptions.Image")));
+            this.closebutton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.closebutton.Location = new System.Drawing.Point(924, -4);
+            this.closebutton.Name = "closebutton";
+            this.closebutton.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.closebutton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.closebutton.Size = new System.Drawing.Size(46, 49);
+            this.closebutton.TabIndex = 4;
+            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // Main
             // 
@@ -335,9 +336,9 @@ namespace GroceryStoreApp
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTOP.ResumeLayout(false);
             this.panelTOP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

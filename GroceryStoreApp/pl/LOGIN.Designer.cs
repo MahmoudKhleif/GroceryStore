@@ -140,8 +140,8 @@ namespace GroceryStoreApp.pl
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LOGIN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
-            this.Activated += new System.EventHandler(this.LOGIN_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
