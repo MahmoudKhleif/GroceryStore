@@ -114,6 +114,7 @@ namespace GroceryStoreApp.pl
             this.simpleButton5.Size = new System.Drawing.Size(128, 44);
             this.simpleButton5.TabIndex = 0;
             this.simpleButton5.Text = "Sales";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton4
             // 
@@ -126,6 +127,7 @@ namespace GroceryStoreApp.pl
             this.simpleButton4.Size = new System.Drawing.Size(202, 44);
             this.simpleButton4.TabIndex = 0;
             this.simpleButton4.Text = "Add Customer";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton3
             // 
@@ -138,6 +140,7 @@ namespace GroceryStoreApp.pl
             this.simpleButton3.Size = new System.Drawing.Size(184, 44);
             this.simpleButton3.TabIndex = 0;
             this.simpleButton3.Text = "procurement";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton2
             // 
@@ -150,6 +153,7 @@ namespace GroceryStoreApp.pl
             this.simpleButton2.Size = new System.Drawing.Size(192, 44);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Add Supplier";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -162,6 +166,7 @@ namespace GroceryStoreApp.pl
             this.simpleButton1.Size = new System.Drawing.Size(184, 44);
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "Add Product";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // flowLayoutPanel1
             // 

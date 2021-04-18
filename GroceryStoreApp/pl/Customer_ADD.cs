@@ -37,7 +37,7 @@ namespace GroceryStoreApp.pl
                     TB_Customer.FirstName = textFirstName.Text;
                     TB_Customer.LastName = textLastName.Text;
                     TB_Customer.Phone = textPhone.Text;
-                    TB_Customer.Email = textPhone.Text;
+                    TB_Customer.Email = textEmail.Text;
                     TB_Customer.Address = textAddress.Text;
                     DB.TB_Customer2.Add(TB_Customer);
                     DB.SaveChanges();
@@ -50,7 +50,7 @@ namespace GroceryStoreApp.pl
                     TB_Customer.FirstName = textFirstName.Text;
                     TB_Customer.LastName = textLastName.Text;
                     TB_Customer.Phone = textPhone.Text;
-                    TB_Customer.Email = textPhone.Text;
+                    TB_Customer.Email = textEmail.Text;
                     TB_Customer.Address = textAddress.Text;
                     DB.Entry(TB_Customer).State = System.Data.Entity.EntityState.Modified;
                     DB.SaveChanges();

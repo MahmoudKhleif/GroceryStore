@@ -44,6 +44,7 @@ namespace GroceryStoreApp.pl
             this.textPassWord.Location = new System.Drawing.Point(12, 223);
             this.textPassWord.Multiline = true;
             this.textPassWord.Name = "textPassWord";
+            this.textPassWord.PasswordChar = '*';
             this.textPassWord.Size = new System.Drawing.Size(273, 45);
             this.textPassWord.TabIndex = 53;
             // 

@@ -52,7 +52,7 @@ namespace GroceryStoreApp.pl
                     TB_User.FirstName = textFirstName.Text;
                     TB_User.LastName = textLastName.Text;
                     TB_User.Phone = textPhone.Text;
-                    TB_User.Email = textPhone.Text;
+                    TB_User.Email = textEmail.Text;
                     TB_User.Address = textAddress.Text;
                     DB.Entry(TB_User).State = System.Data.Entity.EntityState.Modified;
                     DB.SaveChanges();
