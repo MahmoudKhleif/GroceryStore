@@ -118,6 +118,18 @@
     <Compile Include="pl\FormHomePage.Designer.cs">
       <DependentUpon>FormHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="pl\INFO_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pl\INFO_ADD.Designer.cs">
+      <DependentUpon>INFO_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pl\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pl\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
     <Compile Include="pl\Procuerment_ADD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pl\FormHomePage.resx">
       <DependentUpon>FormHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pl\INFO_ADD.resx">
+      <DependentUpon>INFO_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pl\LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pl\Procuerment_ADD.resx">
       <DependentUpon>Procuerment_ADD.cs</DependentUpon>
@@ -312,6 +330,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Register-Now-Button-PNG-Image.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

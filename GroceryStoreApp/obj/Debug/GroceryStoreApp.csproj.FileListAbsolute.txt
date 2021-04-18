@@ -110,3 +110,5 @@ C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreAp
 C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pl.Product_FORM.resources
 C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pl.Sales_Add.resources
 C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pl.Sales_FORM.resources
+C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pl.INFO_ADD.resources
+C:\Users\Mahmo\OneDrive\Skrivbord\GroceryStoreApp\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pl.LOGIN.resources

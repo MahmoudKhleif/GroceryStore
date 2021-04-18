@@ -69,5 +69,15 @@ namespace GroceryStoreApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Register_Now_Button_PNG_Image {
+            get {
+                object obj = ResourceManager.GetObject("Register-Now-Button-PNG-Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
