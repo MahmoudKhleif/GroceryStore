@@ -40,6 +40,7 @@ namespace GroceryStoreApp.pl
             this.colTheTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Detail = new DevExpress.XtraEditors.SimpleButton();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.text_search = new System.Windows.Forms.TextBox();
             this.Refresh = new DevExpress.XtraEditors.SimpleButton();
@@ -146,6 +147,7 @@ namespace GroceryStoreApp.pl
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.Detail);
             this.panel2.Controls.Add(this.btn_search);
             this.panel2.Controls.Add(this.text_search);
             this.panel2.Controls.Add(this.Refresh);
@@ -158,6 +160,16 @@ namespace GroceryStoreApp.pl
             this.panel2.Size = new System.Drawing.Size(949, 100);
             this.panel2.TabIndex = 2;
             // 
+            // Detail
+            // 
+            this.Detail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Detail.ImageOptions.SvgImage")));
+            this.Detail.Location = new System.Drawing.Point(559, 11);
+            this.Detail.Name = "Detail";
+            this.Detail.Size = new System.Drawing.Size(119, 76);
+            this.Detail.TabIndex = 19;
+            this.Detail.Text = "Detail";
+            this.Detail.Click += new System.EventHandler(this.Detail_Click);
+            // 
             // btn_search
             // 
             this.btn_search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
@@ -167,24 +179,25 @@ namespace GroceryStoreApp.pl
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(74, 76);
             this.btn_search.TabIndex = 18;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // text_search
             // 
-            this.text_search.Location = new System.Drawing.Point(594, 35);
+            this.text_search.Location = new System.Drawing.Point(694, 35);
             this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
-            this.text_search.Size = new System.Drawing.Size(243, 34);
+            this.text_search.Size = new System.Drawing.Size(143, 34);
             this.text_search.TabIndex = 17;
             // 
             // Refresh
             // 
-            this.Refresh.Appearance.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Refresh.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh.Appearance.Options.UseFont = true;
             this.Refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Refresh.ImageOptions.Image")));
             this.Refresh.Location = new System.Drawing.Point(408, 12);
             this.Refresh.Margin = new System.Windows.Forms.Padding(4);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(170, 76);
+            this.Refresh.Size = new System.Drawing.Size(129, 76);
             this.Refresh.TabIndex = 16;
             this.Refresh.Text = "Refresh";
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
@@ -265,5 +278,6 @@ namespace GroceryStoreApp.pl
         private DevExpress.XtraGrid.Columns.GridColumn colProductID;
         private DevExpress.XtraGrid.Columns.GridColumn colTheTotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn colDATE;
+        private DevExpress.XtraEditors.SimpleButton Detail;
     }
 }

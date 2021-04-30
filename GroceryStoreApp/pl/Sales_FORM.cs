@@ -69,5 +69,17 @@ namespace GroceryStoreApp.pl
             sales_Add.id = id;
             sales_Add.Show();
         }
+        // to show sales form
+        private void Detail_Click(object sender, EventArgs e)
+        {
+            pl.SalesINFO salesINFO = new SalesINFO();
+            salesINFO.Show();
+        }
+        // searching by the total amount
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            var serch = text_search.Text;
+            gridControl1.DataSource = DB.TB_Saless.Where(x => x.TheTotalAmount.Contains(serch)).ToList();
+        }
     }
 }
